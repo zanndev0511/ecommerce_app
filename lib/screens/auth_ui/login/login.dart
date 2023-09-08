@@ -4,6 +4,9 @@ import 'package:app_demo/widgets/top_tittles/top_tittles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../../consts/routes.dart';
+import '../sign_up/sign_up.dart';
+
 class Login extends StatefulWidget {
   const Login({super.key});
 
@@ -59,7 +62,10 @@ class _LoginState extends State<Login> {
             const Center(child: Text('Don\'t have an account?')),
             Center(
               child: CupertinoButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Routes.instance
+                        .push(context: context, widget: const SignUp());
+                  },
                   child: Text(
                     'Create a new account',
                     style: TextStyle(

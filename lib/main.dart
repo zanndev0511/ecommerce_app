@@ -1,5 +1,5 @@
-import 'package:app_demo/consts/consts.dart';
-import 'package:app_demo/views/splash_screen/splash_screen.dart';
+import 'package:app_demo/consts/theme.dart';
+import 'package:app_demo/screens/auth_ui/welcome/welcome.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,12 +13,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.transparent,
-        appBarTheme: AppBarTheme(backgroundColor: Colors.red),
-        fontFamily: regular,
-      ),
-      home: const SplashScreen(),
+      theme: themeData,
+      home: const Welcome(),
     );
   }
 }
